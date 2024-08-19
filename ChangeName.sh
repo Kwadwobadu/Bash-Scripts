@@ -8,12 +8,12 @@
 
 
 # Prompt user to enter the Device Type
-echo "Enter Device Type (MBA or MBP):"
+echo "Enter Device Type (MBA, MBP or MM):"
 read device_type
 
 # Validate the Device Type
-if [[ "$device_type" != "MBA" && "$device_type" != "MBP" ]]; then
-  echo "Invalid Device Type. Please enter MBA or MBP."
+if [[ "$device_type" != "MBA" && "$device_type" != "MBP" && "$device_type" != "MM" ]]; then
+  echo "Invalid Device Type. Please enter the device type MBA, MBP or MM."
   exit 1
 fi
 
