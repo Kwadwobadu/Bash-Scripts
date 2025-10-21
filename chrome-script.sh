@@ -35,7 +35,7 @@ fi
 }
 
 function download_chrome_installer() {
-    # Download the latest Google Chrome installer
+    # Download the latest Google Chrome Enterprise installer
     curl -o "${HOME}"/Downloads/GoogleChrome.pkg https://dl.google.com/dl/chrome/mac/universal/stable/gcem/GoogleChrome.pkg
     echo "Downloaded Google Chrome installer."
 }
