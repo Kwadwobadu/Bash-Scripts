@@ -23,7 +23,7 @@ else
 fi
 }
 
-# Remove Chrome user data
+# Remove Chrome user data from currentlogon library
 function remove_chrome_data() {
 
 if [ -d "$HOME/Library/Application Support/Google/Chrome" ]; then
@@ -41,7 +41,7 @@ function download_chrome_installer() {
 }
 
 function install_chrome() {
-    # Install Google Chrome and clean up
+    # Install Google Chrome
     sudo installer -pkg "${HOME}"/Downloads/GoogleChrome.pkg -target /
     echo "Installed Google Chrome."
     sleep 3
@@ -52,6 +52,7 @@ function install_chrome() {
 }
 
 function reopen_chrome() {
+    # Using osascript to activate Chrome
     osascript -e 'tell application "Google Chrome" to activate'
     echo "Reopened Google Chrome."
 }
